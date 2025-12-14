@@ -4,12 +4,10 @@
 
 <br>
 
-| Category | Stack |
-| :--- | :--- |
-| **DEVICE** | ![Device](https://img.shields.io/badge/Device-Basys3_(Artix--7)-78C922?style=for-the-badge&logo=microchip&logoColor=white) |
-| **LANGUAGE** | ![Verilog](https://img.shields.io/badge/Language-Verilog_HDL-007ACC?style=for-the-badge&logo=verilog&logoColor=white) |
-| **TOOL** | ![Vivado](https://img.shields.io/badge/Tool-Vivado-FF5252?style=for-the-badge&logo=xilinx&logoColor=white) |
-| **PROTOCOL** | ![UART](https://img.shields.io/badge/Protocol-UART_RS232-FF7F50?style=for-the-badge) |
+![Device](https://img.shields.io/badge/Device-Basys3_(Artix--7)-78C922?style=for-the-badge&logo=microchip&logoColor=white)
+![Language](https://img.shields.io/badge/Language-Verilog_HDL-007ACC?style=for-the-badge&logo=verilog&logoColor=white)
+![Tool](https://img.shields.io/badge/Tool-Vivado-FF5252?style=for-the-badge&logo=xilinx&logoColor=white)
+![Protocol](https://img.shields.io/badge/Protocol-UART_RS232-FF7F50?style=for-the-badge)
 
 <br>
 
@@ -99,12 +97,9 @@ FPGA 내부 로직과 물리적 입출력 장치(Switch, Button, 7-Segment Displ
 
 ## 📂 발표 자료 (Materials)
 
-프로젝트에 대한 상세한 보고서와 시연 영상을 확인하실 수 있습니다.
+프로젝트에 대한 발표자료를 확인하실 수 있습니다.
 
-[![PDF Report](https://img.shields.io/badge/📄_PDF_Report-View_Document-FF0000?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](./files/Watch_Stopwatch_Report.pdf)
-[![Video](https://img.shields.io/badge/▶_Demo_Video-Watch_on_YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](여기에_유튜브_영상_링크_붙여넣기)
-
-*(위 버튼을 클릭하면 보고서 PDF 또는 시연 영상으로 이동합니다.)*
+[![PDF Report](https://img.shields.io/badge/📄_PDF_Report-View_Document-FF0000?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://github.com/seokhyun-hwang/files/blob/main/watch_stopwatch_verilog.pdf)
 
 <br>
 
@@ -124,3 +119,13 @@ FPGA 내부 로직과 물리적 입출력 장치(Switch, Button, 7-Segment Displ
  ├── 📂 constraint
  │   └── 📜 Basys-3-Master.xdc   # FPGA 핀 맵핑 파일
  └── 📜 README.md
+````
+
+<br>
+
+-----
+
+Copyright ⓒ 2024 SEOKHYUN HWANG. All rights reserved.
+
+```
+```
