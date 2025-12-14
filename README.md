@@ -81,7 +81,7 @@ FPGA 내부 로직과 물리적 입출력 장치(Switch, Button, 7-Segment Displ
 * **현상:** 버튼을 한 번 눌렀음에도 불구하고 카운터가 여러 번 증가하거나 스톱워치가 시작하자마자 멈추는 현상 발생.
 * **원인:** 기계식 버튼 내부의 접점이 붙거나 떨어질 때 미세한 진동으로 인해 수십 ms 동안 High/Low 신호가 반복됨.
 * **해결책 (Debouncing):**
-    * [cite_start]샘플링 기법을 적용하여 일정 시간(약 20ms) 동안 신호가 안정적으로 유지될 때만 유효한 입력으로 간주하는 `button_debounce` 모듈을 구현하여 해결 [cite: 1028-1038].
+    * 샘플링 기법을 적용하여 일정 시간(약 20ms) 동안 신호가 안정적으로 유지될 때만 유효한 입력으로 간주하는 `button_debounce` 모듈을 구현하여 해결.
 
 ### ⏱️ 문제점 2: 타이밍 오차 (Timing Inaccuracy)
 * **현상:** 스톱워치를 장시간 동작시켰을 때, 실제 시간(스마트폰 스톱워치)과 미세한 차이가 발생함.
@@ -92,19 +92,31 @@ FPGA 내부 로직과 물리적 입출력 장치(Switch, Button, 7-Segment Displ
 
 ---
 
+## 📂 발표 자료 (Materials)
+
+프로젝트에 대한 상세한 내용을 확인하실 수 있습니다.
+
+[![PDF Report](https://img.shields.io/badge/📄_PDF_Report-View_Document-FF0000?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://github.com/seokhyun-hwang/files/blob/main/watch_stopwatch_verilog.pdf)
+*(위 버튼을 클릭하면 발표자료 PDF로 이동합니다.)*
+
+---
+
 ## 📂 폴더 구조 (Project Structure)
 
 ```bash
 📦 FPGA_Watch_Project
  ├── 📂 src
- │    ├── 📜 clock_top.v          # [Top] 최상위 모듈 (Watch + Stopwatch 통합)
- │    ├── 📜 watch.v              # 시계 Top 모듈
- │    ├── 📜 watch_dp.v           # 시계 카운터 및 시간 로직
- │    ├── 📜 stopwatch.v          # 스톱워치 Top 모듈
- │    ├── 📜 stopwatch_dp.v       # 스톱워치 데이터패스 (1/100초 카운터)
- │    ├── 📜 stopwatch_cu.v       # 스톱워치 FSM 제어기 (Run/Stop/Clear)
- │    ├── 📜 fnd_controller.v     # 7-Segment 디스플레이 스캐닝 제어
- │    └── 📜 button_debounce.v    # 버튼 채터링 방지 모듈
+ │   ├── 📜 clock_top.v          # [Top] 최상위 모듈 (Watch + Stopwatch 통합)
+ │   ├── 📜 watch.v              # 시계 Top 모듈
+ │   ├── 📜 watch_dp.v           # 시계 카운터 및 시간 로직
+ │   ├── 📜 stopwatch.v          # 스톱워치 Top 모듈
+ │   ├── 📜 stopwatch_dp.v       # 스톱워치 데이터패스 (1/100초 카운터)
+ │   ├── 📜 stopwatch_cu.v       # 스톱워치 FSM 제어기 (Run/Stop/Clear)
+ │   ├── 📜 fnd_controller.v     # 7-Segment 디스플레이 스캐닝 제어
+ │   └── 📜 button_debounce.v    # 버튼 채터링 방지 모듈
  ├── 📂 constraint
- │    └── 📜 Basys-3-Master.xdc   # FPGA 핀 맵핑 파일
+ │   └── 📜 Basys-3-Master.xdc   # FPGA 핀 맵핑 파일
  └── 📜 README.md
+
+---
+ Copyright ⓒ 2025 SEOKHYUN HWANG. All rights reserved.
