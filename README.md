@@ -97,7 +97,7 @@ FPGA 내부 로직과 물리적 입출력 장치(Switch, Button, 7-Segment Displ
 
 ## 📂 발표 자료 (Materials)
 
-프로젝트에 대한 발표자료를 확인하실 수 있습니다.
+프로젝트 발표 자료는 아래 버튼을 클릭하여 확인하실 수 있습니다.
 
 [![PDF Report](https://img.shields.io/badge/📄_PDF_Report-View_Document-FF0000?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://github.com/seokhyun-hwang/files/blob/main/watch_stopwatch_verilog.pdf)
 
