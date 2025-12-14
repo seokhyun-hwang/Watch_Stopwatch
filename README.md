@@ -125,7 +125,7 @@ FPGA 내부 로직과 물리적 입출력 장치(Switch, Button, 7-Segment Displ
 
 -----
 
-Copyright ⓒ 2024 SEOKHYUN HWANG. All rights reserved.
+Copyright ⓒ 2025 SEOKHYUN HWANG. All rights reserved.
 
 ```
 ```
