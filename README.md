@@ -1,19 +1,24 @@
 # ⏱️ FPGA Smart Watch & Stopwatch
 
-![Language](https://img.shields.io/badge/Language-Verilog-blue?style=flat&logo=verilog)
-![Tool](https://img.shields.io/badge/Tool-Vivado-red?style=flat&logo=xilinx)
-![Board](https://img.shields.io/badge/Board-Basys3-green?style=flat&logo=fpga)
-
 > **Basys 3 보드의 물리 버튼과 스위치를 활용한 독립형 디지털 시계 및 스톱워치 설계**
 
----
+<br>
+
+| Category | Stack |
+| :--- | :--- |
+| **DEVICE** | ![Device](https://img.shields.io/badge/Device-Basys3_(Artix--7)-78C922?style=for-the-badge&logo=microchip&logoColor=white) |
+| **LANGUAGE** | ![Verilog](https://img.shields.io/badge/Language-Verilog_HDL-007ACC?style=for-the-badge&logo=verilog&logoColor=white) |
+| **TOOL** | ![Vivado](https://img.shields.io/badge/Tool-Vivado-FF5252?style=for-the-badge&logo=xilinx&logoColor=white) |
+| **PROTOCOL** | ![UART](https://img.shields.io/badge/Protocol-UART_RS232-FF7F50?style=for-the-badge) |
+
+<br>
 
 ## 📖 프로젝트 개요 (Project Overview)
 
 이 프로젝트는 **Basys 3 FPGA 보드**를 활용하여 디지털 시계(Watch)와 스톱워치(Stopwatch) 기능을 구현한 결과물입니다.
 FPGA 내부 로직과 물리적 입출력 장치(Switch, Button, 7-Segment Display)로 동작하도록 설계되었습니다. 특히 기계적 스위치의 노이즈를 제거하는 **디바운싱(Debouncing)** 기술과 정확한 시간 계수를 위한 **클럭 분주(Clock Division)** 설계에 중점을 두었습니다.
 
----
+<br>
 
 ## 🚀 주요 기능 (Key Features)
 
@@ -35,7 +40,7 @@ FPGA 내부 로직과 물리적 입출력 장치(Switch, Button, 7-Segment Displ
     * 시계 모드: `시:분` 표시 (초 단위는 내부 카운팅).
     * 스톱워치 모드: `초.밀리초` 표시 및 동작 중 Dot(.) 점멸 기능 지원.
 
----
+<br>
 
 ## 🛠️ 하드웨어 아키텍처 (H/W Architecture)
 
@@ -50,7 +55,7 @@ FPGA 내부 로직과 물리적 입출력 장치(Switch, Button, 7-Segment Displ
 | **fnd_controller.v** | 디스플레이 컨트롤러 | 입력된 시간 데이터를 7-Segment의 Segment 신호와 Digit 선택 신호로 변환 (Dynamic Scanning) |
 | **button_debounce.v** | 입력 안정화 | 기계적 스위치의 떨림(Bouncing) 현상을 제거하여 깨끗한 펄스 신호 생성 |
 
----
+<br>
 
 ## 🎮 조작 방법 (Controls)
 
@@ -71,7 +76,7 @@ FPGA 내부 로직과 물리적 입출력 장치(Switch, Button, 7-Segment Displ
 | **Btn_U** | (기능 없음) | **Minute** 증가 (분 설정) |
 | **Btn_D** | (기능 없음) | **Second** 증가 (초 설정) |
 
----
+<br>
 
 ## ⚡ 기술적 도전 & 트러블슈팅 (Troubleshooting)
 
@@ -90,16 +95,18 @@ FPGA 내부 로직과 물리적 입출력 장치(Switch, Button, 7-Segment Displ
     * 100MHz 클럭에서 정확히 10ms(100Hz)를 생성하기 위한 카운터 상수를 정확하게 계산하여 적용 (`cnt == 1_000_000 - 1`).
     * 조건문(`>=` 대신 `==`)을 명확히 사용하여 불필요한 클럭 사이클 낭비를 방지.
 
----
+<br>
 
 ## 📂 발표 자료 (Materials)
 
-프로젝트에 대한 상세한 내용을 확인하실 수 있습니다.
+프로젝트에 대한 상세한 보고서와 시연 영상을 확인하실 수 있습니다.
 
-[![PDF Report](https://img.shields.io/badge/📄_PDF_Report-View_Document-FF0000?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://github.com/seokhyun-hwang/files/blob/main/watch_stopwatch_verilog.pdf)
-*(위 버튼을 클릭하면 발표자료 PDF로 이동합니다.)*
+[![PDF Report](https://img.shields.io/badge/📄_PDF_Report-View_Document-FF0000?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](./files/Watch_Stopwatch_Report.pdf)
+[![Video](https://img.shields.io/badge/▶_Demo_Video-Watch_on_YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](여기에_유튜브_영상_링크_붙여넣기)
 
----
+*(위 버튼을 클릭하면 보고서 PDF 또는 시연 영상으로 이동합니다.)*
+
+<br>
 
 ## 📂 폴더 구조 (Project Structure)
 
@@ -117,6 +124,3 @@ FPGA 내부 로직과 물리적 입출력 장치(Switch, Button, 7-Segment Displ
  ├── 📂 constraint
  │   └── 📜 Basys-3-Master.xdc   # FPGA 핀 맵핑 파일
  └── 📜 README.md
-
----
- Copyright ⓒ 2025 SEOKHYUN HWANG. All rights reserved.
